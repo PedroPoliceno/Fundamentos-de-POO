@@ -1,4 +1,6 @@
-package Projeto;
+package main;
+import modelo.Financiamento;
+import util.InterfaceUsuario;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,7 +10,6 @@ public class Main {
         double taxaJurosAnual =  usuario.qTaxaJurosAnual();
 
         Financiamento novoFinanciamento = new Financiamento(valorImovel, prazoFinanciamento, taxaJurosAnual);
-        System.out.println("O valor mensal a ser pago é: " + novoFinanciamento.calcPagamentoMensal());
-        System.out.println("O valor total de pagamento é: " + novoFinanciamento.totalPagamento());
+        novoFinanciamento.mostrarDadosFinanciamento();
     }
 }
