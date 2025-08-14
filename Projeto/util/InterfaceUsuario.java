@@ -8,6 +8,7 @@ public class InterfaceUsuario {
     Scanner scanner = new Scanner(System.in);
 
     boolean valorValido(double teste){
+        //Faz o teste para saber se o dado é válido
         if(teste <= 0){
             return false;
         }
@@ -15,15 +16,20 @@ public class InterfaceUsuario {
         return true;
     }
 
+    void mensagemErro(){
+        //Mostra a mensagem de erro na tela
+        System.out.println("Valor inválido, digite novamente.");
+    }
+
     public double qValorImovel(){
         while(true){
             System.out.println("Qual é o valor do imóvel?");
             valorImovelDig = scanner.nextDouble();
-        if (valorValido(valorImovelDig)) {
-            return this.valorImovelDig;
-        }
-        System.out.println("Valor inválido, digite novamente.");
-        }
+            if (valorValido(valorImovelDig)) { //Faz o teste para saber se o dado é válido
+                return this.valorImovelDig;
+            }
+            mensagemErro();
+            }
     }
 
     public int qPrazoFinanciamento(){
@@ -33,18 +39,18 @@ public class InterfaceUsuario {
             if (prazoFinanciamentoDig > 1) {
                 return this.prazoFinanciamentoDig;
             }
-            System.out.println("Valor inválido, digite novamente");
-        }
+            mensagemErro();
+            }
     }
 
     public double qTaxaJurosAnual(){
         while (true){
             System.out.println("Qual é a taxa de juros anual?");
             this.taxaJurosAnualDig = scanner.nextDouble();
-            if(valorValido(taxaJurosAnualDig) && taxaJurosAnualDig < 100){
+            if(valorValido(taxaJurosAnualDig) && taxaJurosAnualDig < 100){ //Faz o teste para saber se o dado é válido
                 return this.taxaJurosAnualDig;
             }
-            System.out.println("Valor inválido, digite novamente!");
-        }
+            mensagemErro();
+            }
     }
 }
