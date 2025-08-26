@@ -2,12 +2,14 @@ package main;
 //Importa as classes para o arquivo main
 import modelo.Financiamento;
 import util.InterfaceUsuario;
+//Importa as utilidades do Java
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Financiamento> novosFinanciamentos = new ArrayList<Financiamento>();
+        List<Financiamento> novosFinanciamentos = new ArrayList<Financiamento>();
         double totalImoveis = 0;
         double totalFinanciamento = 0;
         for ( int i = 0; i < 4; i++){

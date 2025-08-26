@@ -28,7 +28,7 @@ public class Financiamento {
 
     double calcPagamentoMensal() {
         //Calcula o pagamento mensal do financiamento
-        return (valorImovel / (prazoFinanciamento * 12)) * (1+ (taxaJurosAnual / 12));
+        return (valorImovel / (prazoFinanciamento * 12)) * (1 + (taxaJurosAnual / 12));
     }
 
     public double totalPagamento(){
