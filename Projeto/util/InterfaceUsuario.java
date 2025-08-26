@@ -25,7 +25,7 @@ public class InterfaceUsuario {
         while(true){
             System.out.println("Qual é o valor do imóvel?");
             valorImovelDig = scanner.nextDouble();
-            if (valorValido(valorImovelDig)) { //Faz o teste para saber se o dado é válido
+            if (valorValido(valorImovelDig) && valorImovelDig < 10000000) { //Faz o teste para saber se o dado é válido
                 return this.valorImovelDig;
             }
             mensagemErro();
@@ -36,7 +36,7 @@ public class InterfaceUsuario {
         while(true){
             System.out.println("Qual é o prazo de financiamento? (em anos)");
             this.prazoFinanciamentoDig = scanner.nextInt();
-            if (prazoFinanciamentoDig > 1) {
+            if (prazoFinanciamentoDig > 1 && prazoFinanciamentoDig < 35) {
                 return this.prazoFinanciamentoDig;
             }
             mensagemErro();
