@@ -1,3 +1,5 @@
+package ex007;
+
 public class index {
 public static class Rectangle {
     //attributes
