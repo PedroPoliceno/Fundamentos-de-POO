@@ -6,6 +6,7 @@ public class Financiamento {
     private double valorImovel;
     private int prazoFinanciamento;
     private double taxaJurosAnual;
+
     public Financiamento(double valorDoImovel, int prazoFinanAnos, double taxaAnual){
         this.valorImovel = valorDoImovel;
         this.prazoFinanciamento = prazoFinanAnos;
@@ -28,7 +29,7 @@ public class Financiamento {
 
     double calcPagamentoMensal() {
         //Calcula o pagamento mensal do financiamento
-        return (valorImovel / (prazoFinanciamento * 12)) * (1 + (taxaJurosAnual / 12));
+        return (valorImovel / (prazoFinanciamento * 12)) * (1 + (taxaJurosAnual / 12)); 
     }
 
     public double totalPagamento(){
@@ -42,7 +43,7 @@ public class Financiamento {
     public void mostrarDadosFinanciamento(int ordem){
         //Mostra os dados do financiamento(Valor do imóvel, pagamento mensal, total de pagamento)
         System.out.println("\nFinanciamento "+ ordem +" - Valor do imóvel: " + this.valorImovel);
-        System.out.println("Pagamento mensal: " + df.format(calcPagamentoMensal()));
-        System.out.println("Total do pagamento: " + df.format(totalPagamento()) + "\n");
+        System.out.println("Pagamento mensal: " + df.format(this.calcPagamentoMensal()));
+        System.out.println("Total do pagamento: " + df.format(this.totalPagamento()) + "\n");
     }
 }
